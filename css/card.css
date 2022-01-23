@@ -1,0 +1,91 @@
+.card {
+  margin: 20px 40px;
+  flex-basis: 25%;
+  /* height: 70%; */
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 1px 1px 10px black;
+}
+
+.card img {
+  /* position: absolute; */
+  width: 100%;
+  height: 60%;
+  border-bottom: 0.5px solid rgb(212, 208, 208);
+}
+
+.card .dualSense {
+  width: 70%;
+  height: 40%;
+  margin: 20px 45px;
+}
+
+.card .ds3 {
+  width: 70%;
+  height: 60%;
+  margin: 20px 45px;
+}
+.card .title-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: sans-serif;
+  flex-basis: 100%;
+  /* background-color: red; */
+  border-bottom: 0.5px solid rgb(212, 208, 208);
+}
+
+.card .title-description p {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+}
+
+.card .description {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  flex-basis: 100%;
+  padding: 5px 10px 5px 10px;
+}
+
+.card .price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  font-family: sans-serif;
+  flex-basis: 100%;
+  padding: 5px 10px 5px 10px;
+}
+.card .price .newPrice {
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+}
+.card .price .oldPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
+}
+
+@media (max-width: 1000px) {
+  .card .title-description p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .card .description span {
+    font-size: 10px;
+    padding: 0;
+  }
+  .card .price .newPrice {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  .card .price .oldPrice {
+    font-size: 10px;
+    font-weight: 700;
+    color: red;
+  }
+}
