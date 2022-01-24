@@ -1,3 +1,6 @@
+var img = "";
+var urlToBuyPage = "";
+
 function getElementCoordinates(element) {
   return element.getBoundingClientRect();
 }
@@ -11,7 +14,6 @@ document.querySelectorAll(".main-menu .submenu li").forEach((listItem) => {
       const ulChiild = event.target.nextElementSibling;
       const childCoordinates = getElementCoordinates(ulChiild);
       if (childCoordinates.x > bodyCoordinate.width) {
-        console.log("É maior");
         ulChiild.style.marginLeft = "-100.5%";
       }
     }
