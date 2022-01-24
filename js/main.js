@@ -26,9 +26,10 @@ function ajaxNavigation(url, push = true) {
     .then((resp) => resp.text())
     .then((html) => (mainContent.innerHTML = html));
 
-  if (push) {
-    history.pushState({ url }, null, url);
-  }
+  // Adicionar a URL no Histórico de Navegação
+  // if (push) {
+  //   history.pushState({ url }, null, url);
+  // }
 }
 
 document.querySelectorAll("[ajaxAttrib]").forEach((linkAjax) => {
@@ -40,13 +41,14 @@ document.querySelectorAll("[ajaxAttrib]").forEach((linkAjax) => {
   };
 });
 
-window.onpopstate = (event) => {
-  if (event.state) {
-    console.log(event);
-    ajaxNavigation(window.location.href, false);
-  }
-  if (event.state == null) {
-    console.log(event);
-    window.location.href = event.currentTarget.location.href;
-  }
-};
+// Eliminar o último estado do histórico de navegação (Pilha)
+// window.onpopstate = (event) => {
+//   if (event.state) {
+//     console.log(event);
+//     ajaxNavigation(window.location.href, false);
+//   }
+//   if (event.state == null) {
+//     console.log(event);
+//     window.location.href = event.currentTarget.location.href;
+//   }
+// };
