@@ -62,15 +62,16 @@
   padding: 5px 10px 5px 10px;
   color: black;
 }
-.card .price .newPrice {
+.newPrice {
   font-size: 30px;
   color: green;
   font-weight: bold;
 }
-.card .price .oldPrice {
+.oldPrice {
   font-size: 20px;
   font-weight: 700;
   color: red;
+  text-decoration: line-through;
 }
 
 @media (max-width: 1000px) {
