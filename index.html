@@ -193,5 +193,11 @@
       </div>
     </main>
     <script src="js/main.js"></script>
+    <script>
+      if (localStorage.html) {
+        ajaxNavigation(localStorage.html);
+        localStorage.removeItem("html");
+      }
+    </script>
   </body>
 </html>
