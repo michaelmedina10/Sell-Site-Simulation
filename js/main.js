@@ -27,9 +27,9 @@ function ajaxNavigation(url, push = true) {
     .then((html) => (mainContent.innerHTML = html));
 
   // Adicionar a URL no Histórico de Navegação
-  if (push) {
-    history.pushState({ url }, null, url);
-  }
+  // if (push) {
+  //   history.pushState({ url }, null, url);
+  // }
 }
 
 document.querySelectorAll("[ajaxAttrib]").forEach((linkAjax) => {
@@ -42,13 +42,13 @@ document.querySelectorAll("[ajaxAttrib]").forEach((linkAjax) => {
 });
 
 // Eliminar o último estado do histórico de navegação (Pilha)
-window.onpopstate = (event) => {
-  if (event.state) {
-    console.log(event);
-    ajaxNavigation(window.location.href, false);
-  }
-  if (event.state == null) {
-    console.log(event);
-    window.location.href = event.currentTarget.location.href;
-  }
-};
+// window.onpopstate = (event) => {
+//   if (event.state) {
+//     console.log(event);
+//     ajaxNavigation(window.location.href, false);
+//   }
+//   if (event.state == null) {
+//     console.log(event);
+//     window.location.href = event.currentTarget.location.href;
+//   }
+// };
